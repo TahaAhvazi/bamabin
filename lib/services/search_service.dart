@@ -128,12 +128,12 @@ class Review {
 }
 
 class GetSearchService {
-  final String nameofanimation;
+  final String nameofmovie;
 
-  GetSearchService(this.nameofanimation);
+  GetSearchService(this.nameofmovie);
   Future<List<Search>> getSearchList([int startIndex = 0]) async {
     final response = await get(Uri.parse(
-        'https://kidtv-kidtv.fandogh.cloud/kidtv/Movies/?stars__lt=&stars__gt=&fullName__icontains=$nameofanimation&ganer=&isDouble='));
+        'https://bamabin.iran.liara.run/movie/Movies/?stars__lt=&stars__gt=&fullName__icontains=$nameofmovie&ganer=&isDouble='));
     var decode = utf8.decode(response.bodyBytes);
     final myMovies = searchFromJson(decode);
     return myMovies;

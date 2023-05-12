@@ -130,7 +130,7 @@ class Review {
 class GetMovieservice {
   Future<List<Movies>> getAnimationList([int startIndex = 0]) async {
     final response =
-        await get(Uri.parse('https://kidtv-kidtv.fandogh.cloud/kidtv/Movies/'));
+        await get(Uri.parse('https://bamabin.iran.liara.run/movie/Movies/'));
     var decode = utf8.decode(response.bodyBytes);
     final myMovies = animationFromJson(decode);
     return myMovies;
@@ -140,7 +140,7 @@ class GetMovieservice {
 class GetMostNewMoviesService {
   Future<List<Movies>> getAnimationList([int startIndex = 0]) async {
     final response = await get(Uri.parse(
-        'https://kidtv-kidtv.fandogh.cloud/kidtv/Movies/?ordering=-dateCreated'));
+        'https://bamabin.iran.liara.run/movie/Movies/?ordering=-dateCreated'));
     var decode = utf8.decode(response.bodyBytes);
     final myMovies = animationFromJson(decode);
     return myMovies;
@@ -150,7 +150,7 @@ class GetMostNewMoviesService {
 class GetMostLikedMoviesService {
   Future<List<Movies>> getAnimationList([int startIndex = 0]) async {
     final response = await get(Uri.parse(
-        'https://kidtv-kidtv.fandogh.cloud/kidtv/Movies/?ordering=-Country'));
+        'https://bamabin.iran.liara.run/movie/Movies/?ordering=-Country'));
     var decode = utf8.decode(response.bodyBytes);
     final myMovies = animationFromJson(decode);
     return myMovies;
@@ -160,7 +160,7 @@ class GetMostLikedMoviesService {
 class GetMostRatedMoviesService {
   Future<List<Movies>> getAnimationList([int startIndex = 0]) async {
     final response = await get(Uri.parse(
-        'https://kidtv-kidtv.fandogh.cloud/kidtv/Movies/?ordering=-stars'));
+        'https://bamabin.iran.liara.run/movie/Movies/?ordering=-stars'));
     var decode = utf8.decode(response.bodyBytes);
     final myMovies = animationFromJson(decode);
     return myMovies;

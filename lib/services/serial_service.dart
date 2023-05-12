@@ -155,7 +155,7 @@ class Review {
 class GetSerialService {
   Future<List<Serial>> getSerialList([int startIndex = 0]) async {
     final response =
-        await get(Uri.parse('https://kidtv-kidtv.fandogh.cloud/kidtv/series/'));
+        await get(Uri.parse('https://bamabin.iran.liara.run/movie/series/'));
     var decode = utf8.decode(response.bodyBytes);
     final mySerials = serialFromJson(decode);
     return mySerials;
